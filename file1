@@ -1,0 +1,6 @@
+C:\Users\jaredpar\VsVim> git remote show origin
+* remote origin
+  Fetch URL: git@github.com:jaredpar/VsVim.git
+  Push  URL: git@github.com:jaredpar/VsVim.git
+  HEAD branch: master
+  Remote branches:
