@@ -1,3 +1,3 @@
-@ayjay ´~/.gitconfig is global to all git repositories, this here comes from the local config which usually is in .git/config (however for git-submodules the answer is a bit more difficult). Note that strace git config --get remote.origin.url is your friend. – 
+i@ayjay ´~/.gitconfig is global to all git repositories, this here comes from the local config which usually is in .git/config (however for git-submodules the answer is a bit more difficult). Note that strace git config --get remote.origin.url is your friend. – 
 Tino
- Dec 7, 2014 at 9:10
+ june 7, 2023 at 9:10
