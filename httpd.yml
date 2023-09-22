@@ -1,0 +1,16 @@
+---
+- name: installing httpd
+  hosts: docker
+  become: true
+  tasks: 
+  - name: installing httpd package 
+    yum: 
+      name: httpd
+      state: installed
+    notify: start httpd service
+
+  handlers:   
+  - name: start httpd service
+    service:
+      name: httpd
+      state: started
