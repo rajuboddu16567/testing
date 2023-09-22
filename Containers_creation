@@ -1,2 +1,4 @@
 #For Sonarqube running containers
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+#For tomcat running containers
+docker run -d -p 8080:8080 --name my-tomcat tomcat:latest
