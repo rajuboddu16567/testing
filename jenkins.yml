@@ -1,0 +1,26 @@
+---
+- hosts: all
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name: install java
+      action: yum name=java state=present
+
+    - name: adding repository key
+      rpm_key:
+        key: https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+    - name: adding repository
+      yum_repository:
+        name: jenkins
+        description: Jenkins Official Repository
+        baseurl: https://pkg.jenkins.io/redhat-stable
+        gpgcheck: no # Disable GPG check
+
+    - name: install jenkins
+      action: yum name=jenkins state=present
+
+    - name: starting jenkins services
+      action: systemd name=jenkins state=started enabled=yes
+                                                                    
